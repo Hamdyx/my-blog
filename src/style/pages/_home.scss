@@ -1,0 +1,16 @@
+main {
+	.page-content {
+		padding: 0.5rem;
+		border: 2px solid #da7a0c; //* for dev
+
+		header {
+			text-align: center;
+		}
+
+		.course-sections {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+	}
+}

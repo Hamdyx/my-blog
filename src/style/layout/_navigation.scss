@@ -1,0 +1,25 @@
+nav {
+	display: flex;
+	background: #00000067;
+	border: 2px solid #000; //* for dev
+	padding: 0.5rem;
+
+	ul {
+		display: flex;
+		list-style-type: none;
+		gap: 0.5rem;
+
+		li {
+			a {
+				text-decoration: none;
+				color: #fff;
+				padding: 0.25rem 0.5rem;
+				border: 2px solid #000; //* for dev
+
+				&:hover {
+					color: #ffffff83;
+				}
+			}
+		}
+	}
+}
