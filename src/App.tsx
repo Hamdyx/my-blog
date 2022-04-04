@@ -1,5 +1,7 @@
 import React from 'react';
 import DefaultMain from './layout/index';
+import CourseSection from './layout/components/courses';
+import FigureGroup from './layout/components/figures';
 import './style/main.scss';
 
 function App() {
@@ -15,15 +17,10 @@ function App() {
 					</p>
 				</header>
 				<div className="course-sections">
-					<section>
-						<h4>Section 1: Getting Started</h4>
-						<p>some course summary and notes</p>
-					</section>
+					<CourseSection title="Section 1: Getting Started" />
 					<hr />
-					<section>
-						<h4>Section 2: </h4>
-						<p>some course summary and notes</p>
-					</section>
+					<FigureGroup />
+					<hr />
 				</div>
 			</main>
 		</DefaultMain>
