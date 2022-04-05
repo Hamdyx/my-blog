@@ -2,8 +2,12 @@
 	margin: 0;
 	font-family: inherit;
 }
+#root {
+	height: 100vh;
+}
 
 main {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
