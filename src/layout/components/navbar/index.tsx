@@ -1,17 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar: React.FC = (props) => {
 	return (
 		<nav>
 			<ul>
 				<li>
-					<a href="#">Link 1</a>
+					<Link to="/">Home</Link>
 				</li>
 				<li>
-					<a href="#">Link 2</a>
-				</li>
-				<li>
-					<a href="#">Link 3</a>
+					<Link to="/about">Course 1</Link>
 				</li>
 			</ul>
 		</nav>
