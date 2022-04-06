@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SingleTopic from '../singleTopic';
-import LandingHeader from '../../landing/LandingHeader';
+import SingleTopic from '../../singleTopic';
+import LandingHeader from '../../../landing/LandingHeader';
 
 function WhatIsReact() {
 	const summary = {

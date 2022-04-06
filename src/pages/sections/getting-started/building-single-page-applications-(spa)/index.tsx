@@ -1,6 +1,6 @@
 import React from 'react';
-import SingleTopic from '../singleTopic/index';
-import LandingHeader from '../../landing/LandingHeader';
+import SingleTopic from '../../singleTopic/index';
+import LandingHeader from '../../../landing/LandingHeader';
 
 function BuildingSinglePageApplications() {
 	const summary = {

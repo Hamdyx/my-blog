@@ -1,6 +1,6 @@
 import React from 'react';
-import SingleTopic from '../singleTopic/index';
-import LandingHeader from '../../landing/LandingHeader';
+import SingleTopic from '../../singleTopic/index';
+import LandingHeader from '../../../landing/LandingHeader';
 
 function WhyUseReact() {
 	const summary = {
@@ -13,7 +13,7 @@ function WhyUseReact() {
 				page to load, you click a button and wait for some action to
 				complete`,
 			`users send HTML requests to the server and wait for a response for
-				each action or transaction between pages`,
+				each action or transition between pages`,
 		],
 	};
 

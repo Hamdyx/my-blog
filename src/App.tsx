@@ -3,11 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 
 import DefaultMain from './layout/index';
 import Landing from './pages/landing';
-import WhatIsReact from './pages/sections/what-is-react';
-import WhyUseReact from './pages/sections/why-use-react';
-import JavascriptToTheRescue from './pages/sections/javascript-to-the-rescue';
-import ReactVsVanillaJavascript from './pages/sections/react-vs-vanilla-javascript';
-import BuildingSinglePageApplications from './pages/sections/building-single-page-applications-(spa)';
+import WhatIsReact from './pages/sections/getting-started/what-is-react';
+import WhyUseReact from './pages/sections/getting-started/why-use-react';
+import JavascriptToTheRescue from './pages/sections/getting-started/javascript-to-the-rescue';
+import ReactVsVanillaJavascript from './pages/sections/getting-started/react-vs-vanilla-javascript';
+import BuildingSinglePageApplications from './pages/sections/getting-started/building-single-page-applications-(spa)';
+import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
 import './style/main.scss';
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
 				<Route
 					path="/building-single-page-applications-(spa)"
 					element={<BuildingSinglePageApplications />}
+				/>
+				<Route
+					path="/alternative-frameworks"
+					element={<AlternativeFrameworks />}
 				/>
 			</Routes>
 		</DefaultMain>
