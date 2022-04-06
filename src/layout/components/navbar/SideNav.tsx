@@ -11,7 +11,7 @@ const SideNav: React.FC = (props) => {
 		'alternative-frameworks',
 	];
 
-	const menu_2 = [`let and const`];
+	const menu_2 = [`let and const`, `arrow functions`];
 	return (
 		<nav className="side-nav">
 			<DropdownLinks title="Getting Started" links={menu_1} />
