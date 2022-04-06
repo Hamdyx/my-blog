@@ -1,3 +1,5 @@
+import TopicDetails from './TopicDetails';
+
 const SingleTopic: React.FC<{ title: string; notes: Array<string> }> = ({
 	children,
 	title,
@@ -9,15 +11,6 @@ const SingleTopic: React.FC<{ title: string; notes: Array<string> }> = ({
 			<TopicDetails notes={notes} />
 		</dl>
 	);
-};
-
-const TopicDetails: React.FC<{ notes: Array<string> }> = ({
-	children,
-	notes,
-}) => {
-	const content = notes.map((el, i) => <dd key={i}>{el}</dd>);
-
-	return <>{content}</>;
 };
 
 export default SingleTopic;
