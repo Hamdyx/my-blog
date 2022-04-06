@@ -13,7 +13,7 @@ function ExportsAndImports() {
 	};
 
 	const differentSyntax = {
-		title: 'Arrow Functions syntax',
+		title: 'Exports And Imports syntax',
 		notes: [
 			`/person.js: const person = { name: 'Max' } export default person`,
 			`/utility.js: export const clean = () => { ... } export const baseData = 10;`,

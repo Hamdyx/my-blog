@@ -13,6 +13,7 @@ import AlternativeFrameworks from './pages/sections/getting-started/alternative-
 import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
 import ArrowFunctions from './pages/sections/javascript-refresher/arrow-functions';
 import ExportsAndImports from './pages/sections/javascript-refresher/exports-and-imports';
+import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
 import './style/main.scss';
 
 function App() {
@@ -41,6 +42,10 @@ function App() {
 				<Route path="/let-and-const" element={<LetAndConst />} />
 				<Route path="/arrow-functions" element={<ArrowFunctions />} />
 				<Route path="/exports-and-imports" element={<ExportsAndImports />} />
+				<Route
+					path="/understanding-classes"
+					element={<UnderstandingClasses />}
+				/>
 			</Routes>
 		</DefaultMain>
 	);
