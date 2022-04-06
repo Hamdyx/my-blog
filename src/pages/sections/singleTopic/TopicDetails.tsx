@@ -2,9 +2,13 @@ const TopicDetails: React.FC<{ notes: Array<string> }> = ({
 	children,
 	notes,
 }) => {
-	const content = notes.map((el, i) => <dd key={i}>{el}</dd>);
+	const content = notes.map((el, i) => (
+		<li key={i}>
+			<dd>{el}</dd>
+		</li>
+	));
 
-	return <>{content}</>;
+	return <ul>{content}</ul>;
 };
 
 export default TopicDetails;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import SingleTopic from '../singleTopic';
-import LandingHeader from '../../landing/LandingHeader';
+import SingleTopic from '../../singleTopic';
+import LandingHeader from '../../../landing/LandingHeader';
 
-function ReactVsVanillaJavascript() {
+function JavascriptToTheRescue() {
 	const summary = {
-		title: 'React vs vanilla javascript',
+		title: 'Javascript to the resuce',
 		notes: [
 			`javascript runs in the browser on the loading page, and made it
 				possible to execute logic in the browser`,
@@ -25,4 +25,4 @@ function ReactVsVanillaJavascript() {
 	);
 }
 
-export default ReactVsVanillaJavascript;
+export default JavascriptToTheRescue;
