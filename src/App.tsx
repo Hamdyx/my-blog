@@ -9,6 +9,8 @@ import JavascriptToTheRescue from './pages/sections/getting-started/javascript-t
 import ReactVsVanillaJavascript from './pages/sections/getting-started/react-vs-vanilla-javascript';
 import BuildingSinglePageApplications from './pages/sections/getting-started/building-single-page-applications-(spa)';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
+
+import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
 import './style/main.scss';
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
 					path="/alternative-frameworks"
 					element={<AlternativeFrameworks />}
 				/>
+				<Route path="/let-and-const" element={<LetAndConst />} />
 			</Routes>
 		</DefaultMain>
 	);
