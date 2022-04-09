@@ -1,4 +1,5 @@
 import React from 'react';
+import { Nav, NavDropdown } from 'react-bootstrap';
 import DropdownLinks from './DropdownLinks';
 
 const SideNav: React.FC = (props) => {
@@ -8,15 +9,20 @@ const SideNav: React.FC = (props) => {
 		`javascript to the rescue`,
 		`react vs vanilla javascript`,
 		`building single-page-applications (SPA)`,
-		'alternative-frameworks',
+		'alternative frameworks',
 	];
 
-	const menu_2 = [`soon`];
+	const menu_2 = [
+		`let and const`,
+		`arrow functions`,
+		`exports and imports`,
+		'understanding classes',
+	];
 	return (
-		<nav className="side-nav">
+		<Nav defaultActiveKey="/home" className="flex-column sidenav-container">
 			<DropdownLinks title="Getting Started" links={menu_1} />
 			<DropdownLinks title="javascript refresher" links={menu_2} />
-		</nav>
+		</Nav>
 	);
 };
 

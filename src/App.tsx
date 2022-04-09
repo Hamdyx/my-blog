@@ -9,6 +9,11 @@ import JavascriptToTheRescue from './pages/sections/getting-started/javascript-t
 import ReactVsVanillaJavascript from './pages/sections/getting-started/react-vs-vanilla-javascript';
 import BuildingSinglePageApplications from './pages/sections/getting-started/building-single-page-applications-(spa)';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
+
+import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
+import ArrowFunctions from './pages/sections/javascript-refresher/arrow-functions';
+import ExportsAndImports from './pages/sections/javascript-refresher/exports-and-imports';
+import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
 import './style/main.scss';
 
 function App() {
@@ -33,6 +38,13 @@ function App() {
 				<Route
 					path="/alternative-frameworks"
 					element={<AlternativeFrameworks />}
+				/>
+				<Route path="/let-and-const" element={<LetAndConst />} />
+				<Route path="/arrow-functions" element={<ArrowFunctions />} />
+				<Route path="/exports-and-imports" element={<ExportsAndImports />} />
+				<Route
+					path="/understanding-classes"
+					element={<UnderstandingClasses />}
 				/>
 			</Routes>
 		</DefaultMain>
