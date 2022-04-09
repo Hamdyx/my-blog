@@ -1,7 +1,7 @@
 nav {
 	display: flex;
 	background: #00000067;
-	border: 2px solid #000; //* for dev
+	/* border: 2px solid #000; */ //* for dev
 	padding: 1rem;
 
 	ul {
@@ -14,9 +14,14 @@ nav {
 				text-decoration: none;
 				color: #fff;
 				padding: 0.25rem 0.5rem;
-				border: 2px solid #000; //* for dev
+				border-bottom: 2px solid #000; //* for dev
 
 				&:hover {
+					color: #ffffff83;
+				}
+
+				&.active {
+					border: 2px solid #000; //* for dev
 					color: #ffffff83;
 				}
 			}

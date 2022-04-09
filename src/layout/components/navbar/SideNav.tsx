@@ -8,7 +8,7 @@ const SideNav: React.FC = (props) => {
 		`javascript to the rescue`,
 		`react vs vanilla javascript`,
 		`building single-page-applications (SPA)`,
-		'alternative-frameworks',
+		'alternative frameworks',
 	];
 
 	const menu_2 = [
