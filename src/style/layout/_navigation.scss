@@ -28,3 +28,13 @@ nav {
 		}
 	}
 }
+
+.sidenav-container {
+	width: 250px;
+}
+
+.sidenav-items {
+	/* display: flex; */
+	list-style-type: none;
+	gap: 0.5rem;
+}
