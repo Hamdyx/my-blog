@@ -16,6 +16,7 @@ import ExportsAndImports from './pages/sections/javascript-refresher/exports-and
 import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
 import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-and-rest-operator';
 import Destructuring from './pages/sections/javascript-refresher/destructuring';
+import ReferenceAndPrimitiveTypes from './pages/sections/javascript-refresher/reference-and-primitive-types';
 
 import './style/main.scss';
 
@@ -54,6 +55,10 @@ function App() {
 					element={<SpreadAndRestOperator />}
 				/>
 				<Route path="/destructuring" element={<Destructuring />} />
+				<Route
+					path="/reference-and-primitive-types"
+					element={<ReferenceAndPrimitiveTypes />}
+				/>
 			</Routes>
 		</DefaultMain>
 	);
