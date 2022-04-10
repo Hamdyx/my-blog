@@ -15,6 +15,7 @@ import ArrowFunctions from './pages/sections/javascript-refresher/arrow-function
 import ExportsAndImports from './pages/sections/javascript-refresher/exports-and-imports';
 import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
 import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-and-rest-operator';
+import Destructuring from './pages/sections/javascript-refresher/destructuring';
 
 import './style/main.scss';
 
@@ -52,6 +53,7 @@ function App() {
 					path="/spread-and-rest-operator"
 					element={<SpreadAndRestOperator />}
 				/>
+				<Route path="/destructuring" element={<Destructuring />} />
 			</Routes>
 		</DefaultMain>
 	);

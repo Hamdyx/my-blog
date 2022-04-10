@@ -18,6 +18,7 @@ const SideNav: React.FC = (props) => {
 		`exports and imports`,
 		'understanding classes',
 		'spread and rest operator',
+		'destructuring',
 	];
 	return (
 		<Nav defaultActiveKey="/home" className="flex-column sidenav-container">
