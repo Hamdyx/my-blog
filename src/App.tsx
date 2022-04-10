@@ -14,6 +14,8 @@ import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
 import ArrowFunctions from './pages/sections/javascript-refresher/arrow-functions';
 import ExportsAndImports from './pages/sections/javascript-refresher/exports-and-imports';
 import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
+import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-and-rest-operator';
+
 import './style/main.scss';
 
 function App() {
@@ -45,6 +47,10 @@ function App() {
 				<Route
 					path="/understanding-classes"
 					element={<UnderstandingClasses />}
+				/>
+				<Route
+					path="/spread-and-rest-operator"
+					element={<SpreadAndRestOperator />}
 				/>
 			</Routes>
 		</DefaultMain>

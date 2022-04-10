@@ -17,6 +17,7 @@ const SideNav: React.FC = (props) => {
 		`arrow functions`,
 		`exports and imports`,
 		'understanding classes',
+		'spread and rest operator',
 	];
 	return (
 		<Nav defaultActiveKey="/home" className="flex-column sidenav-container">
