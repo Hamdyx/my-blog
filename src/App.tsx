@@ -14,6 +14,11 @@ import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
 import ArrowFunctions from './pages/sections/javascript-refresher/arrow-functions';
 import ExportsAndImports from './pages/sections/javascript-refresher/exports-and-imports';
 import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
+import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-and-rest-operator';
+import Destructuring from './pages/sections/javascript-refresher/destructuring';
+import ReferenceAndPrimitiveTypes from './pages/sections/javascript-refresher/reference-and-primitive-types';
+import ArrayFunctions from './pages/sections/javascript-refresher/array-functions';
+
 import './style/main.scss';
 
 function App() {
@@ -46,6 +51,16 @@ function App() {
 					path="/understanding-classes"
 					element={<UnderstandingClasses />}
 				/>
+				<Route
+					path="/spread-and-rest-operator"
+					element={<SpreadAndRestOperator />}
+				/>
+				<Route path="/destructuring" element={<Destructuring />} />
+				<Route
+					path="/reference-and-primitive-types"
+					element={<ReferenceAndPrimitiveTypes />}
+				/>
+				<Route path="/array-functions" element={<ArrayFunctions />} />
 			</Routes>
 		</DefaultMain>
 	);

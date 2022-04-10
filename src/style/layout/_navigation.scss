@@ -1,7 +1,6 @@
 nav {
 	display: flex;
 	background: #00000067;
-	/* border: 2px solid #000; */ //* for dev
 	padding: 1rem;
 
 	ul {
@@ -34,7 +33,13 @@ nav {
 }
 
 .sidenav-items {
-	/* display: flex; */
 	list-style-type: none;
 	gap: 0.5rem;
+
+	a {
+		&.active {
+			color: #000;
+			border-bottom: 1px solid #000;
+		}
+	}
 }
