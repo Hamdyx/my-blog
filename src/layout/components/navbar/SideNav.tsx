@@ -20,6 +20,7 @@ const SideNav: React.FC = (props) => {
 		'spread and rest operator',
 		'destructuring',
 		'reference and primitive types',
+		'array functions',
 	];
 	return (
 		<Nav defaultActiveKey="/home" className="flex-column sidenav-container">

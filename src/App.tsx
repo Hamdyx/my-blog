@@ -17,6 +17,7 @@ import UnderstandingClasses from './pages/sections/javascript-refresher/understa
 import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-and-rest-operator';
 import Destructuring from './pages/sections/javascript-refresher/destructuring';
 import ReferenceAndPrimitiveTypes from './pages/sections/javascript-refresher/reference-and-primitive-types';
+import ArrayFunctions from './pages/sections/javascript-refresher/array-functions';
 
 import './style/main.scss';
 
@@ -59,6 +60,7 @@ function App() {
 					path="/reference-and-primitive-types"
 					element={<ReferenceAndPrimitiveTypes />}
 				/>
+				<Route path="/array-functions" element={<ArrayFunctions />} />
 			</Routes>
 		</DefaultMain>
 	);
