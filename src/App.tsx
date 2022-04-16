@@ -3,11 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 
 import DefaultMain from './layout/index';
 import Landing from './pages/landing';
-import WhatIsReact from './pages/sections/getting-started/what-is-react';
-import WhyUseReact from './pages/sections/getting-started/why-use-react';
-import JavascriptToTheRescue from './pages/sections/getting-started/javascript-to-the-rescue';
-import ReactVsVanillaJavascript from './pages/sections/getting-started/react-vs-vanilla-javascript';
-import BuildingSinglePageApplications from './pages/sections/getting-started/building-single-page-applications-(spa)';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
 
 import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
@@ -18,32 +13,38 @@ import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-
 import Destructuring from './pages/sections/javascript-refresher/destructuring';
 import ReferenceAndPrimitiveTypes from './pages/sections/javascript-refresher/reference-and-primitive-types';
 import ArrayFunctions from './pages/sections/javascript-refresher/array-functions';
-
+import { gettingStarted } from './content/getting_started';
+import GettingStarted from './pages/sections/getting-started';
 import './style/main.scss';
 
 function App() {
+	const gettingStartedPaths = [
+		'what-is-react',
+		'why-do-we-use-react',
+		'javascript-to-the-rescue',
+		'react-vs-vanilla-javascript',
+		'building-single-page-applications-(spa)',
+	];
+	const gettingStartedRoutes = gettingStartedPaths.map((el, i) => {
+		let content = gettingStarted[i];
+		return (
+			<Route
+				key={i}
+				path={`/getting-started/${el}`}
+				element={<GettingStarted topics={content} />}
+			/>
+		);
+	});
 	return (
 		<DefaultMain>
 			<Routes>
 				<Route path="/" element={<Landing />} />
-				<Route path="/what-is-react" element={<WhatIsReact />} />
-				<Route path="/why-do-we-use-react" element={<WhyUseReact />} />
+				{gettingStartedRoutes}
 				<Route
-					path="/javascript-to-the-rescue"
-					element={<JavascriptToTheRescue />}
-				/>
-				<Route
-					path="/react-vs-vanilla-javascript"
-					element={<ReactVsVanillaJavascript />}
-				/>
-				<Route
-					path="/building-single-page-applications-(spa)"
-					element={<BuildingSinglePageApplications />}
-				/>
-				<Route
-					path="/alternative-frameworks"
+					path="/getting-started/alternative-frameworks"
 					element={<AlternativeFrameworks />}
 				/>
+
 				<Route path="/let-and-const" element={<LetAndConst />} />
 				<Route path="/arrow-functions" element={<ArrowFunctions />} />
 				<Route path="/exports-and-imports" element={<ExportsAndImports />} />

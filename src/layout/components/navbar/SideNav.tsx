@@ -24,7 +24,7 @@ const SideNav: React.FC = (props) => {
 	];
 	return (
 		<Nav defaultActiveKey="/home" className="flex-column sidenav-container">
-			<DropdownLinks title="Getting Started" links={menu_1} />
+			<DropdownLinks title="getting started" links={menu_1} />
 			<DropdownLinks title="javascript refresher" links={menu_2} />
 		</Nav>
 	);
