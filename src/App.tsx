@@ -5,16 +5,10 @@ import DefaultMain from './layout/index';
 import Landing from './pages/landing';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
 
-import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
-import ArrowFunctions from './pages/sections/javascript-refresher/arrow-functions';
-import ExportsAndImports from './pages/sections/javascript-refresher/exports-and-imports';
-import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
-import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-and-rest-operator';
-import Destructuring from './pages/sections/javascript-refresher/destructuring';
-import ReferenceAndPrimitiveTypes from './pages/sections/javascript-refresher/reference-and-primitive-types';
-import ArrayFunctions from './pages/sections/javascript-refresher/array-functions';
 import { gettingStarted } from './content/getting_started';
+import { javascriptRefresher } from './content/javascript_refresher';
 import GettingStarted from './pages/sections/getting-started';
+import JavascriptRefresher from './pages/sections/javascript-refresher';
 import './style/main.scss';
 
 function App() {
@@ -35,6 +29,27 @@ function App() {
 			/>
 		);
 	});
+
+	const javascriptRefresherPaths = [
+		'let-and-const',
+		'arrow-functions',
+		'exports-and-imports',
+		'understanding-classes',
+		'spread-and-rest-operator',
+		'destructuring',
+		'reference-and-primitive-types',
+		'array-functions',
+	];
+	const javascriptRefresherRoutes = javascriptRefresherPaths.map((el, i) => {
+		let content = javascriptRefresher[i];
+		return (
+			<Route
+				key={i}
+				path={`/javascript-refresher/${el}`}
+				element={<JavascriptRefresher topics={content} />}
+			/>
+		);
+	});
 	return (
 		<DefaultMain>
 			<Routes>
@@ -45,23 +60,7 @@ function App() {
 					element={<AlternativeFrameworks />}
 				/>
 
-				<Route path="/let-and-const" element={<LetAndConst />} />
-				<Route path="/arrow-functions" element={<ArrowFunctions />} />
-				<Route path="/exports-and-imports" element={<ExportsAndImports />} />
-				<Route
-					path="/understanding-classes"
-					element={<UnderstandingClasses />}
-				/>
-				<Route
-					path="/spread-and-rest-operator"
-					element={<SpreadAndRestOperator />}
-				/>
-				<Route path="/destructuring" element={<Destructuring />} />
-				<Route
-					path="/reference-and-primitive-types"
-					element={<ReferenceAndPrimitiveTypes />}
-				/>
-				<Route path="/array-functions" element={<ArrayFunctions />} />
+				{javascriptRefresherRoutes}
 			</Routes>
 		</DefaultMain>
 	);

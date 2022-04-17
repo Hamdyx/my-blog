@@ -2,7 +2,7 @@ import React from 'react';
 import SingleTopic from '../singleTopic/index';
 import LandingHeader from '../../landing/LandingHeader';
 
-const GettingStarted: React.FC<{ topics: Array<any> }> = ({
+const JavascriptRefresher: React.FC<{ topics: Array<any> }> = ({
 	topics = ['loading'],
 }) => {
 	let content = topics.map((topic, i) => (
@@ -16,4 +16,4 @@ const GettingStarted: React.FC<{ topics: Array<any> }> = ({
 	);
 };
 
-export default GettingStarted;
+export default JavascriptRefresher;
