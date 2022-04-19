@@ -7,8 +7,10 @@ import AlternativeFrameworks from './pages/sections/getting-started/alternative-
 
 import { gettingStarted } from './content/getting_started';
 import { javascriptRefresher } from './content/javascript_refresher';
+import { reactBasics } from './content/react_basics';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
+import ReactBasics from './pages/sections/react-basics';
 import './style/main.scss';
 
 function App() {
@@ -50,6 +52,24 @@ function App() {
 			/>
 		);
 	});
+
+	const reactBasicsPaths = [
+		'what-are-components',
+		'declarative-approach',
+		'create-react-project',
+		'analyzing-react-project',
+	];
+	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
+		let content = reactBasics[i];
+		return (
+			<Route
+				key={i}
+				path={`/react-basics/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
 	return (
 		<DefaultMain>
 			<Routes>
@@ -61,6 +81,7 @@ function App() {
 				/>
 
 				{javascriptRefresherRoutes}
+				{reactBasicsRoutes}
 			</Routes>
 		</DefaultMain>
 	);
