@@ -58,6 +58,15 @@ function App() {
 		'declarative-approach',
 		'create-react-project',
 		'analyzing-react-project',
+		'introduction-to-jsx',
+		'how-react-works',
+		'building-first-custom-component',
+		'writing-more-complex-jsx-code',
+		'adding-basic-css',
+		'outputting-dynamic-data',
+		'passing-data-via-props',
+		'splitting-components',
+		'composition',
 	];
 	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
 		let content = reactBasics[i];

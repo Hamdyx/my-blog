@@ -98,4 +98,121 @@ export const reactBasics = [
 			],
 		},
 	],
+	[
+		{
+			title: 'introduction to JSX',
+			notes: [
+				`JSX stands for javascript XML, and it's basically html code inside javascript`,
+				`JSX code gets transformed into more browser-friendly code when using npm start before anything gets served`,
+				`if you want to check the transformed code, head to browser developer tools then go to sources tab, 
+					you can find it in static/js folder in main.chunk.js file`,
+				`JSX made it possbile to write more developer friendly code into our javascript that gets transformed afterwards to browser friendly code`,
+			],
+		},
+	],
+	[
+		{
+			title: 'how react works ?',
+			notes: [
+				`simply we create reusable components (custom html and css elements) and export these building blocks to our user interface`,
+				`we define these components with the target state we want then react will generate the right instructions for rendering our desired elements`,
+				`without react we would use the imperative approach, for example: to render a paragraph, we would first create the element, 
+				then we set it's text content, and finally we need to select the target node and append the element as a child node`,
+			],
+		},
+	],
+	[
+		{
+			title: 'building first custom component',
+			notes: [
+				`in react we build a component tree, we have our main App component at the top,
+					below that we can have any custom html elements (custom components) which also hold other user interface pieces`,
+				`as a best practice rule, we place each component in a separate file because as our project grows we would end up with dozens of components`,
+				`when naming component files, we follow the naming convention of react components by starting the name with capital letter 
+					followed by every sub-word starting with a capital letter aswell`,
+				`important note: react components are simply javascript functions that return JSX code`,
+				`when creating a component, we declare a function with the same name as the component file and then we return the desired JSX code`,
+				`to use this component outside it's file, we need to export it as the default of this file, then we can import it into other files`,
+				`once our component is imported, we can use it as html element with openning and closing tags but starting with a capital letter`,
+			],
+		},
+	],
+	[
+		{
+			title: 'writing more complex jsx code',
+			notes: [
+				`when returning multiple elements from a react component, our retuned elements should have only one root element`,
+				`as a work around we can wrap our retuned elements with a div element`,
+				`react provided a way to solve this with react fragments, we can now wrap our element 
+					with <React.Fragment></React.Fragment> or the short syntax: <></>`,
+				`in the past we had to use: import React from 'react'; in all the files containing jsx code`,
+				`in modern react versions we can omit this import, and write our jsx code normally`,
+				`under the hood our jsx code is transformed to somehting like this 
+					React.createElement('div', {}, React.createElement('h2', {}, 'Let's get started'), React.createElement(Expenses, {items: expenses}));`,
+				`then that code gets transformed even more to browser-friendly code`,
+			],
+		},
+	],
+	[
+		{
+			title: 'adding basic css styling',
+			notes: [
+				`first we create our css file next to our component file`,
+				`then we need to import that css file into our component file to tell react to scan this file for custom styles`,
+				`everything else is just the same as styling normal html elements`,
+				`when adding classes to react components, we use className instead of class as it's a reserved word in javascript`,
+			],
+		},
+	],
+	[
+		{
+			title: 'outputting dynamic data',
+			notes: [
+				`till now we only rendered hard coded data into our components, but that doesn't achieve the reusability we need`,
+				`as we know, react components are just javascript functions, which means we can pass parameters to these functions, 
+					however it's called props in react components`,
+				`we can render javascript statements, expressions and variables inside our jsx code by adding {},
+					inside { ... } we can execute any javascript code that we wanna render it's output result`,
+			],
+		},
+	],
+	[
+		{
+			title: 'passing data via props',
+			notes: [
+				`we can make our components reusable by using parameters and a concept called props`,
+				`when we want to render different data into our custom components, we can have this data in the parent component 
+					and have it passed to the child component as props (params, attributes)`,
+				`we cann't have direct access to the variables defined in other components, instead we need to have them passed as props`,
+				`<CustomComponent name='Max' age={24} />`,
+				`to access these attributes we need to define props parameter in our child component, 
+					then we can access it's properties like this: props.name || props.age`,
+			],
+		},
+	],
+	[
+		{
+			title: 'splitting components',
+			notes: [
+				`as you application grows, your components code can get messy, so we always split components into smaller building blocks
+					keeping each component focused on one core task`,
+				`it's always a good practice to split big components into multiple smaller components`,
+				`by splitting components, you keep the code more readable and maintainable`,
+				`when rendreing components, if it has no content between openning and closing tags, we can omit the closing tag
+				 and type it like this <CustomComponent />`,
+			],
+		},
+	],
+	[
+		{
+			title: 'composition',
+			notes: [
+				`composition is about building components from other components which makes building complex user interface much easier`,
+				`we can extract some duplication from html elements layout into custom wrappers`,
+				`custom wrappers also help getting rid of some code duplication in css files`,
+				`custom wrappers don't know their content ahead of time, so we use { props.children } to render content between openning and closing tags`,
+				`react components don't have className attributes, instead if we defined classes like normal elements we can access it through props.className`,
+			],
+		},
+	],
 ];
