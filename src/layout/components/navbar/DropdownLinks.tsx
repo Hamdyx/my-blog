@@ -6,7 +6,10 @@ const DropdownLinks: React.FC<{ title: string; links: Array<string> }> = ({
 	title,
 	links,
 }) => {
-	const content = links.map((link, i) => <SectionLink key={i} path={link} />);
+	const section = title.split(' ').join('-');
+	const content = links.map((link, i) => (
+		<SectionLink key={i} section={section} path={link} />
+	));
 
 	let activeSection;
 	let prevActive = [];

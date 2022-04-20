@@ -1,14 +1,14 @@
 import React from 'react';
 import LandingHeader from '../../../landing/LandingHeader';
 
-import FigureGroup from '../../../../layout/components/figures';
+import Frameworks from './components/Frameworks';
 
 function AlternativeFrameworks() {
 	return (
 		<main className="page-content">
 			<LandingHeader />
 			<div className="course-sections">
-				<FigureGroup />
+				<Frameworks />
 			</div>
 		</main>
 	);

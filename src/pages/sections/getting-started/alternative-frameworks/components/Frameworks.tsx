@@ -1,17 +1,8 @@
 import React from 'react';
 import { FaAngular, FaReact, FaVuejs } from 'react-icons/fa';
+import { alternativeFrameworks } from '../../../../../content/getting_started';
 
-function FigureGroup() {
-	const frameworks = {
-		angular: `complete component-based UI framework, packed with
-		features. Uses Typescript. Can be overkil for smaller
-		projects`,
-		react: `lean and focused component-based UI library. Certain
-		features (e.g. routing) are added via community packages`,
-		vue: `complete component-based UI framework, includes most core
-		features. A bit less popular than React, Angular`,
-	};
-
+function Frameworks() {
 	return (
 		<div className="different-frameworks">
 			<ul>
@@ -19,7 +10,7 @@ function FigureGroup() {
 					<CustomFigure
 						icon={<FaAngular />}
 						title="Angular"
-						details={frameworks.angular}
+						details={alternativeFrameworks.angular}
 					/>
 				</li>
 
@@ -27,7 +18,7 @@ function FigureGroup() {
 					<CustomFigure
 						icon={<FaReact />}
 						title="React.js"
-						details={frameworks.react}
+						details={alternativeFrameworks.react}
 					/>
 				</li>
 
@@ -35,7 +26,7 @@ function FigureGroup() {
 					<CustomFigure
 						icon={<FaVuejs />}
 						title="Vue.js"
-						details={frameworks.vue}
+						details={alternativeFrameworks.vue}
 					/>
 				</li>
 			</ul>
@@ -58,4 +49,4 @@ const CustomFigure: React.FC<{
 		</figure>
 	);
 };
-export default FigureGroup;
+export default Frameworks;

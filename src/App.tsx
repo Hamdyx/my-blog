@@ -3,64 +3,94 @@ import { Routes, Route } from 'react-router-dom';
 
 import DefaultMain from './layout/index';
 import Landing from './pages/landing';
-import WhatIsReact from './pages/sections/getting-started/what-is-react';
-import WhyUseReact from './pages/sections/getting-started/why-use-react';
-import JavascriptToTheRescue from './pages/sections/getting-started/javascript-to-the-rescue';
-import ReactVsVanillaJavascript from './pages/sections/getting-started/react-vs-vanilla-javascript';
-import BuildingSinglePageApplications from './pages/sections/getting-started/building-single-page-applications-(spa)';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
 
-import LetAndConst from './pages/sections/javascript-refresher/let-and-const';
-import ArrowFunctions from './pages/sections/javascript-refresher/arrow-functions';
-import ExportsAndImports from './pages/sections/javascript-refresher/exports-and-imports';
-import UnderstandingClasses from './pages/sections/javascript-refresher/understanding-classes';
-import SpreadAndRestOperator from './pages/sections/javascript-refresher/spread-and-rest-operator';
-import Destructuring from './pages/sections/javascript-refresher/destructuring';
-import ReferenceAndPrimitiveTypes from './pages/sections/javascript-refresher/reference-and-primitive-types';
-import ArrayFunctions from './pages/sections/javascript-refresher/array-functions';
-
+import { gettingStarted } from './content/getting_started';
+import { javascriptRefresher } from './content/javascript_refresher';
+import { reactBasics } from './content/react_basics';
+import GettingStarted from './pages/sections/getting-started';
+import JavascriptRefresher from './pages/sections/javascript-refresher';
+import ReactBasics from './pages/sections/react-basics';
 import './style/main.scss';
 
 function App() {
+	const gettingStartedPaths = [
+		'what-is-react',
+		'why-do-we-use-react',
+		'javascript-to-the-rescue',
+		'react-vs-vanilla-javascript',
+		'building-single-page-applications-(spa)',
+	];
+	const gettingStartedRoutes = gettingStartedPaths.map((el, i) => {
+		let content = gettingStarted[i];
+		return (
+			<Route
+				key={i}
+				path={`/getting-started/${el}`}
+				element={<GettingStarted topics={content} />}
+			/>
+		);
+	});
+
+	const javascriptRefresherPaths = [
+		'let-and-const',
+		'arrow-functions',
+		'exports-and-imports',
+		'understanding-classes',
+		'spread-and-rest-operator',
+		'destructuring',
+		'reference-and-primitive-types',
+		'array-functions',
+	];
+	const javascriptRefresherRoutes = javascriptRefresherPaths.map((el, i) => {
+		let content = javascriptRefresher[i];
+		return (
+			<Route
+				key={i}
+				path={`/javascript-refresher/${el}`}
+				element={<JavascriptRefresher topics={content} />}
+			/>
+		);
+	});
+
+	const reactBasicsPaths = [
+		'what-are-components',
+		'declarative-approach',
+		'create-react-project',
+		'analyzing-react-project',
+		'introduction-to-jsx',
+		'how-react-works',
+		'building-first-custom-component',
+		'writing-more-complex-jsx-code',
+		'adding-basic-css',
+		'outputting-dynamic-data',
+		'passing-data-via-props',
+		'splitting-components',
+		'composition',
+	];
+	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
+		let content = reactBasics[i];
+		return (
+			<Route
+				key={i}
+				path={`/react-basics/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
 	return (
 		<DefaultMain>
 			<Routes>
 				<Route path="/" element={<Landing />} />
-				<Route path="/what-is-react" element={<WhatIsReact />} />
-				<Route path="/why-do-we-use-react" element={<WhyUseReact />} />
+				{gettingStartedRoutes}
 				<Route
-					path="/javascript-to-the-rescue"
-					element={<JavascriptToTheRescue />}
-				/>
-				<Route
-					path="/react-vs-vanilla-javascript"
-					element={<ReactVsVanillaJavascript />}
-				/>
-				<Route
-					path="/building-single-page-applications-(spa)"
-					element={<BuildingSinglePageApplications />}
-				/>
-				<Route
-					path="/alternative-frameworks"
+					path="/getting-started/alternative-frameworks"
 					element={<AlternativeFrameworks />}
 				/>
-				<Route path="/let-and-const" element={<LetAndConst />} />
-				<Route path="/arrow-functions" element={<ArrowFunctions />} />
-				<Route path="/exports-and-imports" element={<ExportsAndImports />} />
-				<Route
-					path="/understanding-classes"
-					element={<UnderstandingClasses />}
-				/>
-				<Route
-					path="/spread-and-rest-operator"
-					element={<SpreadAndRestOperator />}
-				/>
-				<Route path="/destructuring" element={<Destructuring />} />
-				<Route
-					path="/reference-and-primitive-types"
-					element={<ReferenceAndPrimitiveTypes />}
-				/>
-				<Route path="/array-functions" element={<ArrayFunctions />} />
+
+				{javascriptRefresherRoutes}
+				{reactBasicsRoutes}
 			</Routes>
 		</DefaultMain>
 	);

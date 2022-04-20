@@ -22,10 +22,28 @@ const SideNav: React.FC = (props) => {
 		'reference and primitive types',
 		'array functions',
 	];
+
+	const menu_3 = [
+		'what are components',
+		'declarative approach',
+		'create react project',
+		'analyzing react project',
+		'introduction to jsx',
+		'how react works',
+		'building first custom component',
+		'writing more complex jsx code',
+		'adding basic css',
+		'outputting dynamic data',
+		'passing data via props',
+		'splitting components',
+		'composition',
+	];
+
 	return (
 		<Nav defaultActiveKey="/home" className="flex-column sidenav-container">
-			<DropdownLinks title="Getting Started" links={menu_1} />
+			<DropdownLinks title="getting started" links={menu_1} />
 			<DropdownLinks title="javascript refresher" links={menu_2} />
+			<DropdownLinks title="react basics" links={menu_3} />
 		</Nav>
 	);
 };
