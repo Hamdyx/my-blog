@@ -74,3 +74,13 @@ export const gettingStarted = [
 		},
 	],
 ];
+
+export const alternativeFrameworks = {
+	angular: `complete component-based UI framework, packed with
+	features. Uses Typescript. Can be overkil for smaller
+	projects`,
+	react: `lean and focused component-based UI library. Certain
+	features (e.g. routing) are added via community packages`,
+	vue: `complete component-based UI framework, includes most core
+	features. A bit less popular than React, Angular`,
+};
