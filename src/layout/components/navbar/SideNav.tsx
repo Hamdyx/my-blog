@@ -1,49 +1,67 @@
 import React from 'react';
-import { Nav, NavDropdown } from 'react-bootstrap';
+import { Nav, Accordion } from 'react-bootstrap';
 import DropdownLinks from './DropdownLinks';
 
 const SideNav: React.FC = (props) => {
-	const menu_1 = [
-		`what is react`,
-		`why do we use react`,
-		`javascript to the rescue`,
-		`react vs vanilla javascript`,
-		`building single-page-applications (SPA)`,
-		'alternative frameworks',
+	const menuContent = [
+		{
+			title: 'getting started',
+			links: [
+				`what is react`,
+				`why do we use react`,
+				`javascript to the rescue`,
+				`react vs vanilla javascript`,
+				`building single-page-applications (SPA)`,
+				'alternative frameworks',
+			],
+		},
+		{
+			title: 'javascript refresher',
+			links: [
+				`let and const`,
+				`arrow functions`,
+				`exports and imports`,
+				'understanding classes',
+				'spread and rest operator',
+				'destructuring',
+				'reference and primitive types',
+				'array functions',
+			],
+		},
+		{
+			title: 'react basics',
+			links: [
+				'what are components',
+				'declarative approach',
+				'create react project',
+				'analyzing react project',
+				'introduction to jsx',
+				'how react works',
+				'building first custom component',
+				'writing more complex jsx code',
+				'adding basic css',
+				'outputting dynamic data',
+				'passing data via props',
+				'splitting components',
+				'composition',
+			],
+		},
 	];
 
-	const menu_2 = [
-		`let and const`,
-		`arrow functions`,
-		`exports and imports`,
-		'understanding classes',
-		'spread and rest operator',
-		'destructuring',
-		'reference and primitive types',
-		'array functions',
-	];
-
-	const menu_3 = [
-		'what are components',
-		'declarative approach',
-		'create react project',
-		'analyzing react project',
-		'introduction to jsx',
-		'how react works',
-		'building first custom component',
-		'writing more complex jsx code',
-		'adding basic css',
-		'outputting dynamic data',
-		'passing data via props',
-		'splitting components',
-		'composition',
-	];
+	const menuLinks = menuContent.map((el, i) => (
+		<DropdownLinks
+			key={i}
+			eventKey={String(i)}
+			title={el.title}
+			links={el.links}
+		/>
+	));
 
 	return (
 		<Nav defaultActiveKey="/home" className="flex-column sidenav-container">
-			<DropdownLinks title="getting started" links={menu_1} />
-			<DropdownLinks title="javascript refresher" links={menu_2} />
-			<DropdownLinks title="react basics" links={menu_3} />
+			<div className="nav-section">
+				<Accordion>{menuLinks}</Accordion>
+			</div>
 		</Nav>
 	);
 };
