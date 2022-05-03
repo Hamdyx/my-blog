@@ -12,25 +12,11 @@ const DropdownLinks: React.FC<{
 		<SectionLink key={i} section={section} path={link} />
 	));
 
-	let activeSection;
-	let prevActive = [];
-	const handleClick = (e: any) => {
-		let target = e.taret;
-		activeSection = target;
-		let linksArr = [...e.currentTarget.children];
-		linksArr = linksArr.map((el) => el.children[0]);
-		prevActive = linksArr.filter((el) => [...el.classList].includes('active'));
-		if (prevActive.length > 0) prevActive[0].classList.remove('active');
-		e.target.classList.add('active');
-	};
-
 	return (
 		<Accordion.Item eventKey={eventKey}>
 			<Accordion.Header>{title}</Accordion.Header>
 			<Accordion.Body>
-				<ul className="sidenav-items" onClick={handleClick}>
-					{content}
-				</ul>
+				<ul className="sidenav-items">{content}</ul>
 			</Accordion.Body>
 		</Accordion.Item>
 	);

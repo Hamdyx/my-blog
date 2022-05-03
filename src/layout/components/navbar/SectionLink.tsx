@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const SectionLink: React.FC<{ section: string; path: string }> = ({
 	section,
@@ -10,9 +9,9 @@ const SectionLink: React.FC<{ section: string; path: string }> = ({
 
 	return (
 		<li>
-			<Link to={`${section}/${formatted}`} className="nav-link">
+			<NavLink to={`${section}/${formatted}`} className="nav-link">
 				{path}
-			</Link>
+			</NavLink>
 		</li>
 	);
 };
