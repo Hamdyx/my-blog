@@ -46,6 +46,21 @@ const SideNav: React.FC = (props) => {
 				'composition',
 			],
 		},
+		{
+			title: 'react state and events',
+			links: [
+				'listening to events',
+				'component functions',
+				'working with state',
+				'useState hook',
+				'working with multiple state',
+				'previous state',
+				'two-way binding',
+				'child to parent communication',
+				'lifting state up',
+				'controlled vs uncontrolled components',
+			],
+		},
 	];
 
 	const menuLinks = menuContent.map((el, i) => (

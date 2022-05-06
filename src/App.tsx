@@ -8,6 +8,7 @@ import AlternativeFrameworks from './pages/sections/getting-started/alternative-
 import { gettingStarted } from './content/getting_started';
 import { javascriptRefresher } from './content/javascript_refresher';
 import { reactBasics } from './content/react_basics';
+import { StateAndEvents } from './content/state_and_events';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
@@ -68,12 +69,37 @@ function App() {
 		'splitting-components',
 		'composition',
 	];
+
 	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
 		let content = reactBasics[i];
 		return (
 			<Route
 				key={i}
 				path={`/react-basics/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
+	const reactStateAndEventsPaths = [
+		'listening-to-events',
+		'component-functions',
+		'working-with-state',
+		'useState-hook',
+		'working-with-multiple-state',
+		'previous-state',
+		'two-way-binding',
+		'child-to-parent-communication',
+		'lifting-state-up',
+		'controlled-vs-uncontrolled-components',
+	];
+
+	const reactStateAndEventsRoutes = reactStateAndEventsPaths.map((el, i) => {
+		let content = StateAndEvents[i];
+		return (
+			<Route
+				key={i}
+				path={`/react-state-and-events/${el}`}
 				element={<ReactBasics topics={content} />}
 			/>
 		);
@@ -91,6 +117,7 @@ function App() {
 
 				{javascriptRefresherRoutes}
 				{reactBasicsRoutes}
+				{reactStateAndEventsRoutes}
 			</Routes>
 		</DefaultMain>
 	);
