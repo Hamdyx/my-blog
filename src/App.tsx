@@ -5,23 +5,26 @@ import DefaultMain from './layout/index';
 import Landing from './pages/landing';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
 
-import { gettingStarted } from './content/getting_started';
-import { javascriptRefresher } from './content/javascript_refresher';
-import { reactBasics } from './content/react_basics';
-import { StateAndEvents } from './content/state_and_events';
+import { gettingStarted, gettingStartedPaths } from './content/getting_started';
+import {
+	javascriptRefresher,
+	javascriptRefresherPaths,
+} from './content/javascript_refresher';
+import { reactBasics, reactBasicsPaths } from './content/react_basics';
+import {
+	StateAndEvents,
+	reactStateAndEventsPaths,
+} from './content/state_and_events';
+import {
+	listsAndConditionalContent,
+	listsAndConditionalContentPaths,
+} from './content/lists_and_conditional_content';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
 import './style/main.scss';
 
 function App() {
-	const gettingStartedPaths = [
-		'what-is-react',
-		'why-do-we-use-react',
-		'javascript-to-the-rescue',
-		'react-vs-vanilla-javascript',
-		'building-single-page-applications-(spa)',
-	];
 	const gettingStartedRoutes = gettingStartedPaths.map((el, i) => {
 		let content = gettingStarted[i];
 		return (
@@ -33,16 +36,6 @@ function App() {
 		);
 	});
 
-	const javascriptRefresherPaths = [
-		'let-and-const',
-		'arrow-functions',
-		'exports-and-imports',
-		'understanding-classes',
-		'spread-and-rest-operator',
-		'destructuring',
-		'reference-and-primitive-types',
-		'array-functions',
-	];
 	const javascriptRefresherRoutes = javascriptRefresherPaths.map((el, i) => {
 		let content = javascriptRefresher[i];
 		return (
@@ -53,22 +46,6 @@ function App() {
 			/>
 		);
 	});
-
-	const reactBasicsPaths = [
-		'what-are-components',
-		'declarative-approach',
-		'create-react-project',
-		'analyzing-react-project',
-		'introduction-to-jsx',
-		'how-react-works',
-		'building-first-custom-component',
-		'writing-more-complex-jsx-code',
-		'adding-basic-css',
-		'outputting-dynamic-data',
-		'passing-data-via-props',
-		'splitting-components',
-		'composition',
-	];
 
 	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
 		let content = reactBasics[i];
@@ -81,19 +58,6 @@ function App() {
 		);
 	});
 
-	const reactStateAndEventsPaths = [
-		'listening-to-events',
-		'component-functions',
-		'working-with-state',
-		'useState-hook',
-		'working-with-multiple-state',
-		'previous-state',
-		'two-way-binding',
-		'child-to-parent-communication',
-		'lifting-state-up',
-		'controlled-vs-uncontrolled-components',
-	];
-
 	const reactStateAndEventsRoutes = reactStateAndEventsPaths.map((el, i) => {
 		let content = StateAndEvents[i];
 		return (
@@ -104,6 +68,19 @@ function App() {
 			/>
 		);
 	});
+
+	const listsAndConditionalContentRoutes = listsAndConditionalContentPaths.map(
+		(el, i) => {
+			let content = listsAndConditionalContent[i];
+			return (
+				<Route
+					key={i}
+					path={`/lists-and-conditional-content/${el}`}
+					element={<ReactBasics topics={content} />}
+				/>
+			);
+		}
+	);
 
 	return (
 		<DefaultMain>
@@ -118,6 +95,7 @@ function App() {
 				{javascriptRefresherRoutes}
 				{reactBasicsRoutes}
 				{reactStateAndEventsRoutes}
+				{listsAndConditionalContentRoutes}
 			</Routes>
 		</DefaultMain>
 	);

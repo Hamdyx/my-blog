@@ -61,6 +61,16 @@ const SideNav: React.FC = (props) => {
 				'controlled vs uncontrolled components',
 			],
 		},
+		{
+			title: 'lists and conditional content',
+			links: [
+				'rendering lists of data',
+				'using stateful lists',
+				'understanding keys',
+				'conditional content',
+				'dynamic styles',
+			],
+		},
 	];
 
 	const menuLinks = menuContent.map((el, i) => (

@@ -1,3 +1,15 @@
+export const reactStateAndEventsPaths = [
+	'listening-to-events',
+	'component-functions',
+	'working-with-state',
+	'useState-hook',
+	'working-with-multiple-state',
+	'previous-state',
+	'two-way-binding',
+	'child-to-parent-communication',
+	'lifting-state-up',
+	'controlled-vs-uncontrolled-components',
+];
 export const StateAndEvents = [
 	[
 		{
