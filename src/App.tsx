@@ -23,6 +23,10 @@ import {
 	stylingComponents,
 	stylingComponentsPaths,
 } from './content/styling_components';
+import {
+	debuggingReactApps,
+	debuggingReactAppsPaths,
+} from './content/debugging_react_apps';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
@@ -97,6 +101,17 @@ function App() {
 		);
 	});
 
+	const debuggingReactAppsRoutes = debuggingReactAppsPaths.map((el, i) => {
+		let content = debuggingReactApps[i];
+		return (
+			<Route
+				key={i}
+				path={`/debugging-react-apps/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
 	return (
 		<DefaultMain>
 			<Routes>
@@ -112,6 +127,7 @@ function App() {
 				{reactStateAndEventsRoutes}
 				{listsAndConditionalContentRoutes}
 				{stylingComponentsRoutes}
+				{debuggingReactAppsRoutes}
 			</Routes>
 		</DefaultMain>
 	);

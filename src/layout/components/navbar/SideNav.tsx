@@ -80,6 +80,15 @@ const SideNav: React.FC = (props) => {
 				'css modules',
 			],
 		},
+		{
+			title: 'debugging react apps',
+			links: [
+				'react error messages',
+				'code flow and warrings',
+				'working with breakpoints',
+				'react devtools',
+			],
+		},
 	];
 
 	const menuLinks = menuContent.map((el, i) => (
