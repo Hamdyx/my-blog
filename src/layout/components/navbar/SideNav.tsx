@@ -71,6 +71,15 @@ const SideNav: React.FC = (props) => {
 				'dynamic styles',
 			],
 		},
+		{
+			title: 'styling components',
+			links: [
+				'dynamic inline styles',
+				'css dynamic classes',
+				'introducing styled components',
+				'css modules',
+			],
+		},
 	];
 
 	const menuLinks = menuContent.map((el, i) => (

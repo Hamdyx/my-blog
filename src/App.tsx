@@ -19,6 +19,10 @@ import {
 	listsAndConditionalContent,
 	listsAndConditionalContentPaths,
 } from './content/lists_and_conditional_content';
+import {
+	stylingComponents,
+	stylingComponentsPaths,
+} from './content/styling_components';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
@@ -82,6 +86,17 @@ function App() {
 		}
 	);
 
+	const stylingComponentsRoutes = stylingComponentsPaths.map((el, i) => {
+		let content = stylingComponents[i];
+		return (
+			<Route
+				key={i}
+				path={`/styling-components/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
 	return (
 		<DefaultMain>
 			<Routes>
@@ -96,6 +111,7 @@ function App() {
 				{reactBasicsRoutes}
 				{reactStateAndEventsRoutes}
 				{listsAndConditionalContentRoutes}
+				{stylingComponentsRoutes}
 			</Routes>
 		</DefaultMain>
 	);
