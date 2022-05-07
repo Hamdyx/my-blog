@@ -27,6 +27,7 @@ import {
 	debuggingReactApps,
 	debuggingReactAppsPaths,
 } from './content/debugging_react_apps';
+import { divingDeeper, divingDeeperPaths } from './content/diving_deeper';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
@@ -112,6 +113,17 @@ function App() {
 		);
 	});
 
+	const divingDeeperRoutes = divingDeeperPaths.map((el, i) => {
+		let content = divingDeeper[i];
+		return (
+			<Route
+				key={i}
+				path={`/diving-deeper/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
 	return (
 		<DefaultMain>
 			<Routes>
@@ -128,6 +140,7 @@ function App() {
 				{listsAndConditionalContentRoutes}
 				{stylingComponentsRoutes}
 				{debuggingReactAppsRoutes}
+				{divingDeeperRoutes}
 			</Routes>
 		</DefaultMain>
 	);

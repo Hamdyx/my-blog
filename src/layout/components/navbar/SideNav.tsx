@@ -89,6 +89,17 @@ const SideNav: React.FC = (props) => {
 				'react devtools',
 			],
 		},
+		{
+			title: 'diving deeper',
+			links: [
+				'jsx limitations',
+				'wrapper component',
+				'react fragments',
+				'react portals',
+				'working with portals',
+				'working with refs',
+			],
+		},
 	];
 
 	const menuLinks = menuContent.map((el, i) => (
