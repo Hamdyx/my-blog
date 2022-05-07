@@ -1,3 +1,11 @@
+export const gettingStartedPaths = [
+	'what-is-react',
+	'why-do-we-use-react',
+	'javascript-to-the-rescue',
+	'react-vs-vanilla-javascript',
+	'building-single-page-applications-(spa)',
+];
+
 export const gettingStarted = [
 	[
 		{

@@ -1,3 +1,13 @@
+export const javascriptRefresherPaths = [
+	'let-and-const',
+	'arrow-functions',
+	'exports-and-imports',
+	'understanding-classes',
+	'spread-and-rest-operator',
+	'destructuring',
+	'reference-and-primitive-types',
+	'array-functions',
+];
 export const javascriptRefresher = [
 	[
 		{

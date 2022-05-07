@@ -5,22 +5,35 @@ import DefaultMain from './layout/index';
 import Landing from './pages/landing';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
 
-import { gettingStarted } from './content/getting_started';
-import { javascriptRefresher } from './content/javascript_refresher';
-import { reactBasics } from './content/react_basics';
+import { gettingStarted, gettingStartedPaths } from './content/getting_started';
+import {
+	javascriptRefresher,
+	javascriptRefresherPaths,
+} from './content/javascript_refresher';
+import { reactBasics, reactBasicsPaths } from './content/react_basics';
+import {
+	StateAndEvents,
+	reactStateAndEventsPaths,
+} from './content/state_and_events';
+import {
+	listsAndConditionalContent,
+	listsAndConditionalContentPaths,
+} from './content/lists_and_conditional_content';
+import {
+	stylingComponents,
+	stylingComponentsPaths,
+} from './content/styling_components';
+import {
+	debuggingReactApps,
+	debuggingReactAppsPaths,
+} from './content/debugging_react_apps';
+import { divingDeeper, divingDeeperPaths } from './content/diving_deeper';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
 import './style/main.scss';
 
 function App() {
-	const gettingStartedPaths = [
-		'what-is-react',
-		'why-do-we-use-react',
-		'javascript-to-the-rescue',
-		'react-vs-vanilla-javascript',
-		'building-single-page-applications-(spa)',
-	];
 	const gettingStartedRoutes = gettingStartedPaths.map((el, i) => {
 		let content = gettingStarted[i];
 		return (
@@ -32,16 +45,6 @@ function App() {
 		);
 	});
 
-	const javascriptRefresherPaths = [
-		'let-and-const',
-		'arrow-functions',
-		'exports-and-imports',
-		'understanding-classes',
-		'spread-and-rest-operator',
-		'destructuring',
-		'reference-and-primitive-types',
-		'array-functions',
-	];
 	const javascriptRefresherRoutes = javascriptRefresherPaths.map((el, i) => {
 		let content = javascriptRefresher[i];
 		return (
@@ -53,27 +56,69 @@ function App() {
 		);
 	});
 
-	const reactBasicsPaths = [
-		'what-are-components',
-		'declarative-approach',
-		'create-react-project',
-		'analyzing-react-project',
-		'introduction-to-jsx',
-		'how-react-works',
-		'building-first-custom-component',
-		'writing-more-complex-jsx-code',
-		'adding-basic-css',
-		'outputting-dynamic-data',
-		'passing-data-via-props',
-		'splitting-components',
-		'composition',
-	];
 	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
 		let content = reactBasics[i];
 		return (
 			<Route
 				key={i}
 				path={`/react-basics/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
+	const reactStateAndEventsRoutes = reactStateAndEventsPaths.map((el, i) => {
+		let content = StateAndEvents[i];
+		return (
+			<Route
+				key={i}
+				path={`/react-state-and-events/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
+	const listsAndConditionalContentRoutes = listsAndConditionalContentPaths.map(
+		(el, i) => {
+			let content = listsAndConditionalContent[i];
+			return (
+				<Route
+					key={i}
+					path={`/lists-and-conditional-content/${el}`}
+					element={<ReactBasics topics={content} />}
+				/>
+			);
+		}
+	);
+
+	const stylingComponentsRoutes = stylingComponentsPaths.map((el, i) => {
+		let content = stylingComponents[i];
+		return (
+			<Route
+				key={i}
+				path={`/styling-components/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
+	const debuggingReactAppsRoutes = debuggingReactAppsPaths.map((el, i) => {
+		let content = debuggingReactApps[i];
+		return (
+			<Route
+				key={i}
+				path={`/debugging-react-apps/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
+	const divingDeeperRoutes = divingDeeperPaths.map((el, i) => {
+		let content = divingDeeper[i];
+		return (
+			<Route
+				key={i}
+				path={`/diving-deeper/${el}`}
 				element={<ReactBasics topics={content} />}
 			/>
 		);
@@ -91,6 +136,11 @@ function App() {
 
 				{javascriptRefresherRoutes}
 				{reactBasicsRoutes}
+				{reactStateAndEventsRoutes}
+				{listsAndConditionalContentRoutes}
+				{stylingComponentsRoutes}
+				{debuggingReactAppsRoutes}
+				{divingDeeperRoutes}
 			</Routes>
 		</DefaultMain>
 	);
