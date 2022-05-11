@@ -100,6 +100,29 @@ const SideNav: React.FC = (props) => {
 				'working with refs',
 			],
 		},
+		{
+			title: 'react typescript',
+			links: [
+				'what and why',
+				'installing and using',
+				'base types',
+				'complex types',
+				'types inference',
+				'union types',
+				'types aliases',
+				'function types',
+				'generics',
+				'typescript template',
+				'props and typescript',
+				'data model',
+				'form submissions',
+				'working with refs',
+				'function props',
+				'managing state',
+				'context api',
+				'tsconfig',
+			],
+		},
 	];
 
 	const menuLinks = menuContent.map((el, i) => (

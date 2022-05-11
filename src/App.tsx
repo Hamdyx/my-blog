@@ -28,6 +28,10 @@ import {
 	debuggingReactAppsPaths,
 } from './content/debugging_react_apps';
 import { divingDeeper, divingDeeperPaths } from './content/diving_deeper';
+import {
+	reactTypescript,
+	reactTypescriptPaths,
+} from './content/react_typescript';
 import GettingStarted from './pages/sections/getting-started';
 import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
@@ -124,6 +128,17 @@ function App() {
 		);
 	});
 
+	const reactTypescriptRoutes = reactTypescriptPaths.map((el, i) => {
+		let content = reactTypescript[i];
+		return (
+			<Route
+				key={i}
+				path={`/react-typescript/${el}`}
+				element={<ReactBasics topics={content} />}
+			/>
+		);
+	});
+
 	return (
 		<DefaultMain>
 			<Routes>
@@ -141,6 +156,7 @@ function App() {
 				{stylingComponentsRoutes}
 				{debuggingReactAppsRoutes}
 				{divingDeeperRoutes}
+				{reactTypescriptRoutes}
 			</Routes>
 		</DefaultMain>
 	);
