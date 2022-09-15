@@ -5,7 +5,6 @@ import DefaultMain from './layout/index';
 import Landing from './pages/landing';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
 
-import { gettingStarted, gettingStartedPaths } from './content/getting_started';
 import {
 	javascriptRefresher,
 	javascriptRefresherPaths,
@@ -38,17 +37,6 @@ import ReactBasics from './pages/sections/react-basics';
 import './style/main.scss';
 
 function App() {
-	const gettingStartedRoutes = gettingStartedPaths.map((el, i) => {
-		let content = gettingStarted[i];
-		return (
-			<Route
-				key={i}
-				path={`/getting-started/${el}`}
-				element={<GettingStarted topics={content} />}
-			/>
-		);
-	});
-
 	const javascriptRefresherRoutes = javascriptRefresherPaths.map((el, i) => {
 		let content = javascriptRefresher[i];
 		return (
@@ -143,7 +131,10 @@ function App() {
 		<DefaultMain>
 			<Routes>
 				<Route path="/" element={<Landing />} />
-				{gettingStartedRoutes}
+				<Route
+					path="/getting-started/:id"
+					element={<GettingStarted topics={[]} />}
+				/>
 				<Route
 					path="/getting-started/alternative-frameworks"
 					element={<AlternativeFrameworks />}
