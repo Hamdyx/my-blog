@@ -7,6 +7,7 @@ import { Topics } from '../../../content/getting_started';
 const GettingStarted: React.FC<{ topics: any }> = ({
 	topics = ['loading'],
 }) => {
+	console.log('GettingStarted ======> useParams()', useParams());
 	const { id } = useParams();
 	const data: any = Topics['getting-started'];
 	topics = data[id as any];

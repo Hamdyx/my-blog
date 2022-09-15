@@ -4,11 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import DefaultMain from './layout/index';
 import Landing from './pages/landing';
 import AlternativeFrameworks from './pages/sections/getting-started/alternative-frameworks';
-
-import {
-	javascriptRefresher,
-	javascriptRefresherPaths,
-} from './content/javascript_refresher';
 import { reactBasics, reactBasicsPaths } from './content/react_basics';
 import {
 	StateAndEvents,
@@ -37,17 +32,6 @@ import ReactBasics from './pages/sections/react-basics';
 import './style/main.scss';
 
 function App() {
-	const javascriptRefresherRoutes = javascriptRefresherPaths.map((el, i) => {
-		let content = javascriptRefresher[i];
-		return (
-			<Route
-				key={i}
-				path={`/javascript-refresher/${el}`}
-				element={<JavascriptRefresher topics={content} />}
-			/>
-		);
-	});
-
 	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
 		let content = reactBasics[i];
 		return (
@@ -140,7 +124,11 @@ function App() {
 					element={<AlternativeFrameworks />}
 				/>
 
-				{javascriptRefresherRoutes}
+				<Route
+					path="/:topic/:id"
+					element={<JavascriptRefresher topics={[]} />}
+				/>
+				{/* {javascriptRefresherRoutes} */}
 				{reactBasicsRoutes}
 				{reactStateAndEventsRoutes}
 				{listsAndConditionalContentRoutes}
