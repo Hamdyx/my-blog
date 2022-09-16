@@ -1,14 +1,5 @@
-export const divingDeeperPaths = [
-	'jsx-limitations',
-	'wrapper-component',
-	'react-fragments',
-	'react-portals',
-	'working-with-portals',
-	'working-with-refs',
-];
-
-export const divingDeeper = [
-	[
+export const diving_deeper = {
+	'jsx-limitations': [
 		{
 			title: 'JSX limitations',
 			notes: [
@@ -22,7 +13,7 @@ export const divingDeeper = [
 			],
 		},
 	],
-	[
+	'wrapper-component': [
 		{
 			title: 'wrapper component',
 			notes: [
@@ -32,7 +23,7 @@ export const divingDeeper = [
 			],
 		},
 	],
-	[
+	'react-fragments': [
 		{
 			title: 'react fragments',
 			notes: [
@@ -43,7 +34,7 @@ export const divingDeeper = [
 			],
 		},
 	],
-	[
+	'react-portals': [
 		{
 			title: 'react portals',
 			notes: [
@@ -54,7 +45,7 @@ export const divingDeeper = [
 			],
 		},
 	],
-	[
+	'working-with-portals': [
 		{
 			title: 'working with portals',
 			notes: [
@@ -65,7 +56,7 @@ export const divingDeeper = [
 			],
 		},
 	],
-	[
+	'working-with-refs': [
 		{
 			title: 'working with refs',
 			notes: [
@@ -85,4 +76,4 @@ export const divingDeeper = [
 			],
 		},
 	],
-];
+};

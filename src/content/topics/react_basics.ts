@@ -1,20 +1,5 @@
-export const reactBasicsPaths = [
-	'what-are-components',
-	'declarative-approach',
-	'create-react-project',
-	'analyzing-react-project',
-	'introduction-to-jsx',
-	'how-react-works',
-	'building-first-custom-component',
-	'writing-more-complex-jsx-code',
-	'adding-basic-css',
-	'outputting-dynamic-data',
-	'passing-data-via-props',
-	'splitting-components',
-	'composition',
-];
-export const reactBasics = [
-	[
+export const react_basics = {
+	'what-are-components': [
 		{
 			title: 'What are components ?',
 			notes: [
@@ -32,7 +17,7 @@ export const reactBasics = [
 			],
 		},
 	],
-	[
+	'declarative-approach': [
 		{
 			title: 'how is a component build ?',
 			notes: [
@@ -44,12 +29,12 @@ export const reactBasics = [
 			title: 'react used declarative approach',
 			notes: [
 				`we don't tell react that a certain HTML element should be created 
-                and inserted in a specific place in the user interface like in vanilla js`,
+					and inserted in a specific place in the user interface like in vanilla js`,
 				`in react we define the desired target state and let react figure out the actual javascript DOM instructions and user interface updates`,
 			],
 		},
 	],
-	[
+	'create-react-project': [
 		{
 			title: 'Create new react projects',
 			notes: [
@@ -64,7 +49,7 @@ export const reactBasics = [
 			],
 		},
 	],
-	[
+	'analyzing-react-project': [
 		{
 			title: 'Analyzing standard react projects',
 			notes: [
@@ -113,38 +98,38 @@ export const reactBasics = [
 			],
 		},
 	],
-	[
+	'introduction-to-jsx': [
 		{
 			title: 'introduction to JSX',
 			notes: [
 				`JSX stands for javascript XML, and it's basically html code inside javascript`,
 				`JSX code gets transformed into more browser-friendly code when using npm start before anything gets served`,
 				`if you want to check the transformed code, head to browser developer tools then go to sources tab, 
-					you can find it in static/js folder in main.chunk.js file`,
+						you can find it in static/js folder in main.chunk.js file`,
 				`JSX made it possbile to write more developer friendly code into our javascript that gets transformed afterwards to browser friendly code`,
 			],
 		},
 	],
-	[
+	'how-react-works': [
 		{
 			title: 'how react works ?',
 			notes: [
 				`simply we create reusable components (custom html and css elements) and export these building blocks to our user interface`,
 				`we define these components with the target state we want then react will generate the right instructions for rendering our desired elements`,
 				`without react we would use the imperative approach, for example: to render a paragraph, we would first create the element, 
-				then we set it's text content, and finally we need to select the target node and append the element as a child node`,
+					then we set it's text content, and finally we need to select the target node and append the element as a child node`,
 			],
 		},
 	],
-	[
+	'building-first-custom-component': [
 		{
 			title: 'building first custom component',
 			notes: [
 				`in react we build a component tree, we have our main App component at the top,
-					below that we can have any custom html elements (custom components) which also hold other user interface pieces`,
+						below that we can have any custom html elements (custom components) which also hold other user interface pieces`,
 				`as a best practice rule, we place each component in a separate file because as our project grows we would end up with dozens of components`,
 				`when naming component files, we follow the naming convention of react components by starting the name with capital letter 
-					followed by every sub-word starting with a capital letter aswell`,
+						followed by every sub-word starting with a capital letter aswell`,
 				`important note: react components are simply javascript functions that return JSX code`,
 				`when creating a component, we declare a function with the same name as the component file and then we return the desired JSX code`,
 				`to use this component outside it's file, we need to export it as the default of this file, then we can import it into other files`,
@@ -152,23 +137,23 @@ export const reactBasics = [
 			],
 		},
 	],
-	[
+	'writing-more-complex-jsx-code': [
 		{
 			title: 'writing more complex jsx code',
 			notes: [
 				`when returning multiple elements from a react component, our retuned elements should have only one root element`,
 				`as a work around we can wrap our retuned elements with a div element`,
 				`react provided a way to solve this with react fragments, we can now wrap our element 
-					with <React.Fragment></React.Fragment> or the short syntax: <></>`,
+						with <React.Fragment></React.Fragment> or the short syntax: <></>`,
 				`in the past we had to use: import React from 'react'; in all the files containing jsx code`,
 				`in modern react versions we can omit this import, and write our jsx code normally`,
 				`under the hood our jsx code is transformed to somehting like this 
-					React.createElement('div', {}, React.createElement('h2', {}, 'Let's get started'), React.createElement(Expenses, {items: expenses}));`,
+						React.createElement('div', {}, React.createElement('h2', {}, 'Let's get started'), React.createElement(Expenses, {items: expenses}));`,
 				`then that code gets transformed even more to browser-friendly code`,
 			],
 		},
 	],
-	[
+	'adding-basic-css': [
 		{
 			title: 'adding basic css styling',
 			notes: [
@@ -179,46 +164,46 @@ export const reactBasics = [
 			],
 		},
 	],
-	[
+	'outputting-dynamic-data': [
 		{
 			title: 'outputting dynamic data',
 			notes: [
 				`till now we only rendered hard coded data into our components, but that doesn't achieve the reusability we need`,
 				`as we know, react components are just javascript functions, which means we can pass parameters to these functions, 
-					however it's called props in react components`,
+						however it's called props in react components`,
 				`we can render javascript statements, expressions and variables inside our jsx code by adding {},
-					inside { ... } we can execute any javascript code that we wanna render it's output result`,
+						inside { ... } we can execute any javascript code that we wanna render it's output result`,
 			],
 		},
 	],
-	[
+	'passing-data-via-props': [
 		{
 			title: 'passing data via props',
 			notes: [
 				`we can make our components reusable by using parameters and a concept called props`,
 				`when we want to render different data into our custom components, we can have this data in the parent component 
-					and have it passed to the child component as props (params, attributes)`,
+						and have it passed to the child component as props (params, attributes)`,
 				`we cann't have direct access to the variables defined in other components, instead we need to have them passed as props`,
 				`<CustomComponent name='Max' age={24} />`,
 				`to access these attributes we need to define props parameter in our child component, 
-					then we can access it's properties like this: props.name || props.age`,
+						then we can access it's properties like this: props.name || props.age`,
 			],
 		},
 	],
-	[
+	'splitting-components': [
 		{
 			title: 'splitting components',
 			notes: [
 				`as you application grows, your components code can get messy, so we always split components into smaller building blocks
-					keeping each component focused on one core task`,
+						keeping each component focused on one core task`,
 				`it's always a good practice to split big components into multiple smaller components`,
 				`by splitting components, you keep the code more readable and maintainable`,
 				`when rendreing components, if it has no content between openning and closing tags, we can omit the closing tag
-				 and type it like this <CustomComponent />`,
+					 and type it like this <CustomComponent />`,
 			],
 		},
 	],
-	[
+	composition: [
 		{
 			title: 'composition',
 			notes: [
@@ -230,4 +215,4 @@ export const reactBasics = [
 			],
 		},
 	],
-];
+};

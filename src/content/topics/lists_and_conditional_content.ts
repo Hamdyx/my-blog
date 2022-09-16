@@ -1,13 +1,5 @@
-export const listsAndConditionalContentPaths = [
-	'rendering-lists-of-data',
-	'using-stateful-lists',
-	'understanding-keys',
-	'conditional-content',
-	'dynamic-styles',
-];
-
-export const listsAndConditionalContent = [
-	[
+export const lists_and_conditional_content = {
+	'rendering-lists-of-data': [
 		{
 			title: `rendering lists of data`,
 			notes: [
@@ -17,7 +9,7 @@ export const listsAndConditionalContent = [
 			],
 		},
 	],
-	[
+	'using-stateful-lists': [
 		{
 			title: `using stateful lists`,
 			notes: [
@@ -27,7 +19,7 @@ export const listsAndConditionalContent = [
 			],
 		},
 	],
-	[
+	'understanding-keys': [
 		{
 			title: `understanding keys`,
 			notes: [
@@ -38,7 +30,7 @@ export const listsAndConditionalContent = [
 			],
 		},
 	],
-	[
+	'conditional-content': [
 		{
 			title: `conditional content`,
 			notes: [
@@ -49,7 +41,7 @@ export const listsAndConditionalContent = [
 			],
 		},
 	],
-	[
+	'dynamic-styles': [
 		{
 			title: `dynamic styles`,
 			notes: [
@@ -60,4 +52,4 @@ export const listsAndConditionalContent = [
 			],
 		},
 	],
-];
+};
