@@ -26,10 +26,9 @@ import {
 	reactTypescript,
 	reactTypescriptPaths,
 } from './content/react_typescript';
-import GettingStarted from './pages/sections/getting-started';
-import JavascriptRefresher from './pages/sections/javascript-refresher';
 import ReactBasics from './pages/sections/react-basics';
 import './style/main.scss';
+import TopicMain from './pages/topicMain';
 
 function App() {
 	const reactBasicsRoutes = reactBasicsPaths.map((el, i) => {
@@ -115,20 +114,13 @@ function App() {
 		<DefaultMain>
 			<Routes>
 				<Route path="/" element={<Landing />} />
+
+				<Route path="/:topic/:id" element={<TopicMain />} />
 				<Route
-					path="/getting-started/:id"
-					element={<GettingStarted topics={[]} />}
-				/>
-				<Route
-					path="/getting-started/alternative-frameworks"
+					path="/getting_started/alternative-frameworks"
 					element={<AlternativeFrameworks />}
 				/>
 
-				<Route
-					path="/:topic/:id"
-					element={<JavascriptRefresher topics={[]} />}
-				/>
-				{/* {javascriptRefresherRoutes} */}
 				{reactBasicsRoutes}
 				{reactStateAndEventsRoutes}
 				{listsAndConditionalContentRoutes}
