@@ -1,12 +1,5 @@
-export const stylingComponentsPaths = [
-	`dynamic-inline-styles`,
-	`css-dynamic-classes`,
-	`introducing-styled-components`,
-	`css-modules`,
-];
-
-export const stylingComponents = [
-	[
+export const styling_components = {
+	'dynamic-inline-styles': [
 		{
 			title: 'dynamic inline styles',
 			notes: [
@@ -18,7 +11,7 @@ export const stylingComponents = [
 			],
 		},
 	],
-	[
+	'css-dynamic-classes': [
 		{
 			title: 'css dynamic classes',
 			notes: [
@@ -30,7 +23,7 @@ export const stylingComponents = [
 			],
 		},
 	],
-	[
+	'introducing-styled-components': [
 		{
 			title: 'introducing styled components',
 			notes: [
@@ -54,7 +47,7 @@ export const stylingComponents = [
 			],
 		},
 	],
-	[
+	'css-modules': [
 		{
 			title: 'css modules',
 			notes: [
@@ -68,4 +61,4 @@ export const stylingComponents = [
 			],
 		},
 	],
-];
+};

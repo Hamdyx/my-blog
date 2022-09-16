@@ -1,11 +1,5 @@
-export const debuggingReactAppsPaths = [
-	'react-error-messages',
-	'code-flow-and-warrings',
-	'working-with-breakpoints',
-	'react-devtools',
-];
-export const debuggingReactApps = [
-	[
+export const debugging_react_apps = {
+	'react-error-messages': [
 		{
 			title: 'react error messages',
 			notes: [
@@ -17,7 +11,7 @@ export const debuggingReactApps = [
 			],
 		},
 	],
-	[
+	'code-flow-and-warrings': [
 		{
 			title: 'code flow and warrings',
 			notes: [
@@ -28,7 +22,7 @@ export const debuggingReactApps = [
 			],
 		},
 	],
-	[
+	'working-with-breakpoints': [
 		{
 			title: 'working with breakpoints',
 			notes: [
@@ -38,7 +32,7 @@ export const debuggingReactApps = [
 			],
 		},
 	],
-	[
+	'react-devtools': [
 		{
 			title: 'react devtools',
 			notes: [
@@ -50,4 +44,4 @@ export const debuggingReactApps = [
 			],
 		},
 	],
-];
+};

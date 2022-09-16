@@ -1,15 +1,5 @@
-export const javascriptRefresherPaths = [
-	'let-and-const',
-	'arrow-functions',
-	'exports-and-imports',
-	'understanding-classes',
-	'spread-and-rest-operator',
-	'destructuring',
-	'reference-and-primitive-types',
-	'array-functions',
-];
-export const javascriptRefresher = [
-	[
+export const javascript_refresher = {
+	'let-and-const': [
 		{
 			title: 'Let and Const',
 			notes: [
@@ -20,7 +10,7 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-	[
+	'arrow-functions': [
 		{
 			title: 'Arrow Functions',
 			notes: [
@@ -42,7 +32,7 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-	[
+	'exports-and-imports': [
 		{
 			title: 'Exports And Imports',
 			notes: [
@@ -65,7 +55,7 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-	[
+	'understanding-classes': [
 		{
 			title: 'Understanding Classes',
 			notes: [
@@ -94,7 +84,7 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-	[
+	'spread-and-rest-operator': [
 		{
 			title: 'Spread and Rest operator',
 			notes: [
@@ -107,7 +97,7 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-	[
+	destructuring: [
 		{
 			title: 'Destructuring',
 			notes: [
@@ -122,7 +112,7 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-	[
+	'reference-and-primitive-types': [
 		{
 			title: 'Primitive types',
 			notes: [
@@ -149,7 +139,7 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-	[
+	'array-functions': [
 		{
 			title: 'Array functions',
 			notes: [
@@ -161,4 +151,4 @@ export const javascriptRefresher = [
 			],
 		},
 	],
-];
+};

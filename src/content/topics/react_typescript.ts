@@ -1,26 +1,5 @@
-export const reactTypescriptPaths = [
-	'what-and-why',
-	'installing-and-using',
-	'base-types',
-	'complex-types',
-	'types-inference',
-	'union-types',
-	'types-aliases',
-	'function-types',
-	'generics',
-	'typescript-template',
-	'props-and-typescript',
-	'data-model',
-	'form-submissions',
-	'working-with-refs',
-	'function-props',
-	'managing-state',
-	'context-api',
-	'tsconfig',
-];
-
-export const reactTypescript = [
-	[
+export const react_typescript = {
+	'what-and-why': [
 		{
 			title: 'what and why',
 			notes: [
@@ -35,7 +14,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'installing-and-using': [
 		{
 			title: 'installing and using typescript',
 			notes: [
@@ -50,7 +29,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'base-types': [
 		{
 			title: 'base types',
 			notes: [
@@ -62,7 +41,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'complex-types': [
 		{
 			title: 'complex types',
 			notes: [
@@ -76,7 +55,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'types-inference': [
 		{
 			title: 'types inference',
 			notes: [
@@ -86,7 +65,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'union-types': [
 		{
 			title: 'union types',
 			notes: [
@@ -96,7 +75,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'types-aliases': [
 		{
 			title: 'types aliases',
 			notes: [
@@ -107,7 +86,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'function-types': [
 		{
 			title: 'function types',
 			notes: [
@@ -121,7 +100,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	generics: [
 		{
 			title: 'generics',
 			notes: [
@@ -137,7 +116,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'typescript-template': [
 		{
 			title: 'typescript template',
 			notes: [
@@ -149,7 +128,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'props-and-typescript': [
 		{
 			title: 'props and typescript',
 			notes: [
@@ -168,7 +147,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'data-model': [
 		{
 			title: 'data model',
 			notes: [
@@ -182,7 +161,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'form-submissions': [
 		{
 			title: 'form-submissions',
 			notes: [
@@ -194,7 +173,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'working-with-refs': [
 		{
 			title: 'working with refs',
 			notes: [
@@ -210,7 +189,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'function-props': [
 		{
 			title: 'function props',
 			notes: [
@@ -221,7 +200,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'managing-state': [
 		{
 			title: 'managing state',
 			notes: [
@@ -233,7 +212,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	'context-api': [
 		{
 			title: 'context api',
 			notes: [
@@ -256,7 +235,7 @@ export const reactTypescript = [
 			],
 		},
 	],
-	[
+	tsconfig: [
 		{
 			title: 'tsconfig',
 			notes: [
@@ -268,4 +247,4 @@ export const reactTypescript = [
 			],
 		},
 	],
-];
+};

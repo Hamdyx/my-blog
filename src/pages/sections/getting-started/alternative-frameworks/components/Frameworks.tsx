@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAngular, FaReact, FaVuejs } from 'react-icons/fa';
-import { alternativeFrameworks } from '../../../../../content/getting_started';
+import { alternativeFrameworks } from '../../../../../content/topics/getting_started';
 
 function Frameworks() {
 	return (

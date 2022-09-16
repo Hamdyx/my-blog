@@ -1,17 +1,5 @@
-export const reactStateAndEventsPaths = [
-	'listening-to-events',
-	'component-functions',
-	'working-with-state',
-	'useState-hook',
-	'working-with-multiple-state',
-	'previous-state',
-	'two-way-binding',
-	'child-to-parent-communication',
-	'lifting-state-up',
-	'controlled-vs-uncontrolled-components',
-];
-export const StateAndEvents = [
-	[
+export const react_state_and_events = {
+	'listening-to-events': [
 		{
 			title: 'listening to events',
 			notes: [
@@ -26,7 +14,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'component-functions': [
 		{
 			title: 'component functions',
 			notes: [
@@ -39,7 +27,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'working-with-state': [
 		{
 			title: 'working with state',
 			notes: [
@@ -58,7 +46,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'usestate-hook': [
 		{
 			title: 'useState hook',
 			notes: [
@@ -73,7 +61,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'working-with-multiple-state': [
 		{
 			title: 'working with multiple state',
 			notes: [
@@ -94,7 +82,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'previous-state': [
 		{
 			title: 'previous state',
 			notes: [
@@ -107,7 +95,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'two-way-binding': [
 		{
 			title: 'two-way binding',
 			notes: [
@@ -118,7 +106,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'child-to-parent-communication': [
 		{
 			title: 'child to parent communication',
 			notes: [
@@ -129,7 +117,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'lifting-state-up': [
 		{
 			title: 'lifting state up',
 			notes: [
@@ -139,7 +127,7 @@ export const StateAndEvents = [
 			],
 		},
 	],
-	[
+	'controlled-vs-uncontrolled-components': [
 		{
 			title: 'controlled vs uncontrolled components',
 			notes: [
@@ -149,4 +137,4 @@ export const StateAndEvents = [
 			],
 		},
 	],
-];
+};

@@ -1,13 +1,5 @@
-export const gettingStartedPaths = [
-	'what-is-react',
-	'why-do-we-use-react',
-	'javascript-to-the-rescue',
-	'react-vs-vanilla-javascript',
-	'building-single-page-applications-(spa)',
-];
-
-export const gettingStarted = [
-	[
+export const getting_started = {
+	'what-is-react': [
 		{
 			title: `what is react`,
 			notes: [
@@ -16,7 +8,7 @@ export const gettingStarted = [
 			],
 		},
 	],
-	[
+	'why-do-we-use-react': [
 		{
 			title: 'Why do we use React ?',
 			notes: [
@@ -31,20 +23,20 @@ export const gettingStarted = [
 			],
 		},
 	],
-	[
+	'javascript-to-the-rescue': [
 		{
 			title: 'Javascript to the resuce',
 			notes: [
 				`javascript runs in the browser on the loading page, and made it
-				possible to execute logic in the browser`,
+					possible to execute logic in the browser`,
 				`you can manipulate the HTML structure (DOM) of the page with
-				javascript`,
+					javascript`,
 				`no (visible) requests to the server required, no need to wait for
-				a new HTML page as a response`,
+					a new HTML page as a response`,
 			],
 		},
 	],
-	[
+	'react-vs-vanilla-javascript': [
 		{
 			title: 'vanilla javascript',
 			notes: [
@@ -64,24 +56,25 @@ export const gettingStarted = [
 			],
 		},
 	],
-	[
+	'building-single-page-applications-(spa)': [
 		{
 			title: 'building single-page-applications (SPA)',
 			notes: [
 				`react can be used to control parts of HTML pages or entire pages`,
 				`widget approach on a multi-page-application. (some) pages are
-				still rendered on and served by a backend server`,
+					still rendered on and served by a backend server`,
 				`react can also be used to control the entire frontend of a web
-				application`,
+					application`,
 				`single-page-application (SPA) approach. Server only sends one HTML
-				page, thereafter, react takes over and controls the UI`,
+					page, thereafter, react takes over and controls the UI`,
 				`with react we dont request second HTML page, instead we use
-				javascript to change the content of the page which leads to
-				smoother UI and better user experience`,
+					javascript to change the content of the page which leads to
+					smoother UI and better user experience`,
 			],
 		},
 	],
-];
+	// "alternative-frameworks":[]
+};
 
 export const alternativeFrameworks = {
 	angular: `complete component-based UI framework, packed with

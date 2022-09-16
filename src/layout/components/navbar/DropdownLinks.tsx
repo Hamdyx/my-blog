@@ -7,7 +7,7 @@ const DropdownLinks: React.FC<{
 	title: string;
 	links: Array<string>;
 }> = ({ eventKey, title, links }) => {
-	const section = title.split(' ').join('-');
+	const section = title.split(' ').join('_');
 	const content = links.map((link, i) => (
 		<SectionLink key={i} section={section} path={link} />
 	));
